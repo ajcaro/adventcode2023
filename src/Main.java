@@ -5,37 +5,27 @@ import java.util.List;
 
 public class Main {
 
-
-	
 	public static void main(String[] args) throws IOException {
 
 //		String filename = "resources/input.txt";
 		String filename = "resources/input_prod.txt";
 		LectorFichero lector = new LectorFichero(filename);
 		List<String> fichero = lector.listar();
-		//listarFichero(fichero);
-
 		GameService gs = new GameService();
-		
+
 		int resultado = gs.getSumGamesPosibles(fichero);
-		
 		System.out.println("Resultado = " + resultado);
-		
-		
-		
-		// RECORREMOS LAS LINEAS Y DESGRANAMOS LOS VALORES QUE NECESITAMOS
-		
-	
+
 	}
 
-	
 	private static void listarArray(Collection<Integer> numeros) {
 		for (Integer numero : numeros) {
 			System.out.println(numero);
 		}
 	}
+
 	private static void listarFichero(Collection<String> lineas) {
-	
+
 		for (String linea : lineas) {
 			System.out.println(linea);
 		}
