@@ -53,8 +53,8 @@ public class Main {
 		if (numeros.isEmpty())
 			return 0;
 
-		int first = numeros.getFirst();
-		int last = numeros.getLast();
+		int first = numeros.get(0);
+		int last = numeros.get(numeros.size() -1);
 
 		// System.out.println("first: " + first + " last: " + last);
 
