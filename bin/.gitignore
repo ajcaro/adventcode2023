@@ -1,2 +1,7 @@
-/resources/
 /GameService.class
+/LectorFichero.class
+/Main.class
+/resources/
+/FicheroService.class
+/DebugService.class
+/EngineService.class

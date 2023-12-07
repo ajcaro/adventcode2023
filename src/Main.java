@@ -7,28 +7,22 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 
-//		String filename = "resources/input.txt";
-		String filename = "resources/input_prod.txt";
-		LectorFichero lector = new LectorFichero(filename);
+		String filename = "resources/input.txt";
+//		String filename = "resources/input_prod.txt";
+		FicheroService lector = new FicheroService(filename);
+		
 		List<String> fichero = lector.listar();
-		GameService gs = new GameService();
-
-		int resultado = gs.getSumGamesPosibles(fichero);
-		System.out.println("Resultado = " + resultado);
-
+		
+		EngineService es = new EngineService();
+		
+		//es.listarPartes(fichero);
+		List<char[]> caracteres = es.lineaToArrayChar(fichero);
+		
+			
+		DebugService.listarFichero(caracteres);
+		
 	}
 
-	private static void listarArray(Collection<Integer> numeros) {
-		for (Integer numero : numeros) {
-			System.out.println(numero);
-		}
-	}
 
-	private static void listarFichero(Collection<String> lineas) {
-
-		for (String linea : lineas) {
-			System.out.println(linea);
-		}
-	}
 
 }

@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LectorFichero {
+public class FicheroService {
 
 	private String fileName;
 
-	public LectorFichero(String fileName) {
+	public FicheroService(String fileName) {
 		this.fileName = fileName;
 	}
 
@@ -25,7 +25,6 @@ public class LectorFichero {
 		String str;
 
 		while ((str = br.readLine()) != null) {
-
 			fichero.add(str);
 		}
 
